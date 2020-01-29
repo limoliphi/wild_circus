@@ -1,5 +1,9 @@
 @import "~bootstrap/scss/bootstrap";
+@import "vars";
+@import "navbar_style";
+@import "home";
+@import "footer";
 
-body {
-    background-color: lightgray;
-}
+//body {
+//    background-color: white;
+//}

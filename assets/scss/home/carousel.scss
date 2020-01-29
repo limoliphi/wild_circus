@@ -1,0 +1,22 @@
+.caroussel_image {
+  object-fit: cover;
+}
+
+.carousel_title_one h5{
+  color: $primary-color;
+  font-size: 2vw;
+  text-align: start;
+  text-transform: uppercase;
+}
+
+.carousel_title_one p{
+  font-size: 2.5vw;
+  color: $primary-color;
+  text-align: start;
+  margin-bottom: 0;
+}
+
+.carousel_para{
+  border-left: solid $primary-color;
+  padding-left: 1rem;
+}
