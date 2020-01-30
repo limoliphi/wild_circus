@@ -47,7 +47,6 @@ class Event
         return $this->pictureFile;
     }
 
-
     /**
      * @param File|null $pictureFile
      * @return Event

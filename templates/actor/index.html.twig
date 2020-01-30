@@ -4,21 +4,26 @@
 
 {% block body %}
 
-    <h1 class="m-5">Les acteurs de la troupe</h1>
+    <h1 class="m-5 display-3">Les acteurs de la troupe</h1>
 
     <div class="mt-5 mb-5 container-fluid">
         <div class="row no-gutters">
             <div class="col-lg-12 col-xs-1">
-                <div class="justify-content-around d-flex flex-wrap">
+                <div class="card-list justify-content-around d-flex flex-wrap">
                     {% for actor in actors %}
                         <div class="card" style="width: 18rem;">
                             <div class="card-body">
                                 <h5 class="card-title">{{ actor.name }}</h5>
+                                <p class="mt-2 card-text">Objet fétiche : {{ actor.trick }}
+                                {% if actor.filename %}
+                                    <img src="{{ vich_uploader_asset(actor, 'pictureFile') }}" alt="image actor"
+                                         class="card-img-top">
+                                {% endif %}
 {#                                <img src="/assets/images/{{ actor.picture }}" class="card-img-top">#}
-                                <p>{{ actor.picture }}</p>
-                                <p class="card-text">Son objet de scène : {{ actor.trick }}
+                                <p class="mt-2 card-text">A l'affiche de...</p>
                                     {% for event in actor.events %}
-                                        <p>{{ event.title }}</p>
+{#                                        <p>{{ event.title }}</p>#}
+                                        <p class="card-text">{{ event.title }}</p>
                                     {% endfor %}
                                 </p>
                             </div>

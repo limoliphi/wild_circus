@@ -9,6 +9,7 @@ use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Vich\UploaderBundle\Form\Type\VichImageType;
 
 
 class ActorType extends AbstractType
@@ -17,7 +18,12 @@ class ActorType extends AbstractType
     {
         $builder
             ->add('name')
-            ->add('picture')
+            ->add('pictureFile', VichImageType::class, [
+                'label' => 'Image',
+                'required' => false,
+                'delete_label' => 'Supprimer l\'image ?',
+                'download_label' => 'Agrandir l\'image'
+            ])
             ->add('trick')
             ->add('events', EntityType::class, [
                 'class' => Event::class,

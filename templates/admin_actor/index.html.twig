@@ -20,7 +20,10 @@
             <tr>
                 <td>{{ actor.id }}</td>
                 <td>{{ actor.name }}</td>
-                <td>{{ actor.picture }}</td>
+                <td>{% if actor.filename %}
+                        <img src="{{ vich_uploader_asset(actor, 'pictureFile') }}" alt="image actor"
+                             class="card-img-top">
+                    {% endif %}</td>
                 <td>{{ actor.trick }}</td>
                 <td>
                     <a href="{{ path('actor_show', {'id': actor.id}) }}">show</a>

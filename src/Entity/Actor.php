@@ -5,9 +5,20 @@ namespace App\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use DateTime;
+use Symfony\Component\HttpFoundation\File\File;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Vich\UploaderBundle\Entity\File as EmbeddedFile;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Exception;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ActorRepository")
+ * @UniqueEntity("name"), message="Titre déjà existant")
+ * @Vich\Uploadable()
  */
 class Actor
 {
@@ -24,7 +35,89 @@ class Actor
     private $name;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @return File|null
+     */
+    public function getPictureFile(): ?File
+    {
+        return $this->pictureFile;
+    }
+
+    /**
+     * @param File|null $pictureFile
+     * @return Actor
+     * @throws Exception
+     */
+    public function setPictureFile(?File $pictureFile): Actor
+    {
+        $this->pictureFile = $pictureFile;
+
+        if ($this->pictureFile instanceof UploadedFile) {
+            $this->updatedAt = new DateTime('now');
+        }
+        return $this;
+    }
+
+
+    public function getUpdatedAt(): ?\DateTimeInterface
+    {
+        return $this->updatedAt;
+    }
+
+    public function setUpdatedAt(\DateTimeInterface $updatedAt): self
+    {
+        $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getFilename(): ?string
+    {
+        return $this->filename;
+    }
+
+    /**
+     * @param string|null $filename
+     * @return Actor
+     */
+    public function setFilename(?string $filename): Actor
+    {
+        $this->filename = $filename;
+        return $this;
+    }
+
+    /**
+     * @var File|null
+     * @Assert\Image(
+     *     mimeTypes={
+     *          "image/png",
+     *          "image/jpeg",
+     *          "image/webp",
+     *          "image/jpg",
+     *      }
+     * )
+     * @Assert\File(
+     *     maxSize="2M",
+     * )
+     * @Vich\UploadableField(mapping="actor_image", fileNameProperty="filename")
+     */
+    private $pictureFile;
+
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    private $updatedAt;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     * @var string|null
+     */
+    private $filename;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $picture;
 
