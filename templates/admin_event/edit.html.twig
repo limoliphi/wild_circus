@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+
+{% block title %}Modifier un événement{% endblock %}
+
+{% block body %}
+    <div class="m-5 container">
+        <h1>Modifier un événement</h1>
+
+        {{ include('admin_event/_form.html.twig', {'button_label': 'Sauvegarder'}) }}
+
+        <a href="{{ path('event_index') }}">
+            <button type="button" class="btn btn-primary">Retour à la liste des événements</button>
+        </a>
+
+        {{ include('admin_event/_delete_form.html.twig') }}
+    </div>
+{% endblock %}
