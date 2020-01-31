@@ -62,6 +62,32 @@ h3 {
   text-align: center;
 }
 
+.lead {
+  font-family: 'Amatic SC', cursive;
+  font-size: 3em;
+}
+
+.sub-lead {
+  font-size: 2em;
+  font-family: 'Amatic SC', cursive;
+}
+
+.photo-joker {
+  background-image: url("https://cdn.radiofrance.fr/s3/cruiser-production/2019/11/34c2f58a-5b03-442b-9823-5f73c79d600b/801x410_joker.jpg");
+  height: 60em;
+  background-size: cover;
+}
+
+.jumbotron {
+  border-left: 5px solid #FFC10A;
+  border-bottom: 5px solid #A71C2B;
+}
+
+.title-pub {
+  color: #A71C2B;
+}
+
+
   //.photo {
   //  width: 10%;
   //  height: 10%;
