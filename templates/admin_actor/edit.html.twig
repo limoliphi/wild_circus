@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+
+{% block title %}Modifier un acteur{% endblock %}
+
+{% block body %}
+    <div class="m-5 container">
+    <h1>Modifier un acteur et son spectacle</h1>
+
+    {{ include('admin_actor/_form.html.twig', {'button_label': 'Sauvegarder'}) }}
+
+        <a href="{{ path('actor_index') }}">
+            <button type="button" class="btn btn-primary">Retour à la liste des acteurs</button>
+        </a>
+
+    {{ include('admin_actor/_delete_form.html.twig') }}
+    </div>
+{% endblock %}

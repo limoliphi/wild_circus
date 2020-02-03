@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+
+{% block title %}Ajouter un acteur{% endblock %}
+
+{% block body %}
+    <div class="m-5 container">
+        <h1>Ajouter un acteur à un spectacle</h1>
+
+        {{ include('admin_actor/_form.html.twig') }}
+
+        <a href="{{ path('actor_index') }}">
+            <button type="button" class="btn btn-primary">Retour à la liste des acteurs</button>
+        </a>
+    </div>
+{% endblock %}
