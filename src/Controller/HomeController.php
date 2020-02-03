@@ -17,7 +17,7 @@ class HomeController extends AbstractController
      */
     public function index(EventRepository $eventRepository, ActorRepository $actorRepository)
     {
-        $events = $eventRepository->findBy([], ['date' => 'DESC']);
+        $events = $eventRepository->findBy([], ['date' => 'ASC']);
         $actors = $actorRepository->findAll();
 
 
