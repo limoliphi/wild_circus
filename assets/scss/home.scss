@@ -1,0 +1,100 @@
+.card-list {
+  .card-img-top {
+    height: 15rem;
+    object-fit: cover;
+  }
+}
+
+h1 {
+  color:  #FFC10A;
+  text-align: center;
+  font-family: 'Bangers', cursive;
+}
+
+h2 {
+  color: black;
+  text-align: center;
+  font-family: 'Bangers', cursive;
+}
+
+.text-presentation {
+  font-size: 3em;
+  font-family: 'Amatic SC', cursive;
+  border-left: 5px solid #FFC10A;
+}
+
+.navbar {
+  font-family: 'Bangers', cursive;
+  font-size: 1.5em;
+}
+
+h3 {
+  font-family: 'Bangers', cursive;
+  font-size: 3em;
+  }
+
+.infos-footer-links {
+  font-family: 'Amatic SC', cursive;
+}
+
+.card-title {
+  font-family: 'Bangers', cursive;
+  color :#A71C2B;
+  font-size: 1em;
+  text-align: right;
+}
+
+.card-text {
+  text-align: center;
+  font-family: 'Amatic SC', cursive;
+  font-size: 1.8em;
+}
+
+.infos_footer {
+  font-family: 'Bangers', cursive;
+  font-size: 1em;
+  text-align: center;
+}
+
+.links1 {
+  font-family: 'Bangers', cursive;
+  font-size: 1em;
+  text-align: center;
+}
+
+.lead {
+  font-family: 'Amatic SC', cursive;
+  font-size: 3em;
+}
+
+.sub-lead {
+  font-size: 2em;
+  font-family: 'Amatic SC', cursive;
+}
+
+.photo-joker {
+  background-image: url("https://cdn.radiofrance.fr/s3/cruiser-production/2019/11/34c2f58a-5b03-442b-9823-5f73c79d600b/801x410_joker.jpg");
+  height: 60em;
+  background-size: cover;
+}
+
+.jumbotron {
+  border-left: 5px solid #FFC10A;
+  border-bottom: 5px solid #A71C2B;
+}
+
+.title-pub {
+  color: #A71C2B;
+}
+
+.alert-message {
+  margin-top: 8em;
+}
+
+  //.photo {
+  //  width: 10%;
+  //  height: 10%;
+  //}
+  //
+  //
+

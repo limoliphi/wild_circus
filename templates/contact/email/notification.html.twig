@@ -1,0 +1,11 @@
+{% extends 'layout_mail.html.twig' %}
+
+{% block body %}
+    <div style="background-color: whitesmoke">
+        <div style="color: blue"><h1>Quelqu'un a cherché à contacter Joker Circus...</h1></div>
+        <div style="color: grey"><h2>Son prénom : {{ contactFormData.firstname }}</h2></div>
+        <div style="color: grey"><h2>Son nom : {{ contactFormData.lastname }}</h2></div>
+        <div style="color: grey"><h2>Son email : {{ contactFormData.email }}</h2></div>
+        <div style="color: grey"><h2>Son message : {{ contactFormData.message }}</h2></div>
+    </div>
+{% endblock %}
