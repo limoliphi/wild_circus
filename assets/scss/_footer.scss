@@ -1,8 +1,21 @@
 .cadre-footer {
-  background-color: #F7FCFC;
+  background-color: $sixth-color;
 }
 
 h3 {
-
+  font-family: $font-title;
+  font-size: 3em;
   margin-top: 4rem;
+}
+
+.network-footer {
+  font-family: $font-title;
+  font-size: 1em;
+  text-align: center;
+}
+
+.footer-links {
+  font-family: $font-title;
+  font-size: 1em;
+  text-align: center;
 }

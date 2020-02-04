@@ -1,16 +1,16 @@
-
 <nav class="navbar navbar-expand-lg navbar-light bg-white">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-        <img class="mr-5 test-image" src="{{ asset('build/images/adesivo-batman-coringa-joker-02-10x8cm-coringa.jpg') }}"
-             alt="First slide">
-    <a class="mr-5 navbar-brand" href="home">Joker Circus</a>
+    <img class="mr-5 nav-image" src="{{ asset('build/images/adesivo-batman-coringa-joker-02-10x8cm-coringa.jpg') }}"
+         alt="Image nav">
+    <a class="mr-5 navbar-brand" href="/">Joker Circus</a>
 
     <div class="mr-5 collapse navbar-collapse" id="navbarNav">
         <ul class="mr-5 navbar-nav">
             <li class="mr-5 nav-item">
-                <a class="nav-link" href="home">Des événements</a>
+                <a class="nav-link" href="/">Des événements</a>
             </li>
             <li class="mr-5 nav-item">
                 <a class="nav-link" href="actor">Une troupe</a>
@@ -23,9 +23,8 @@
             </li>
         </ul>
     </div>
-
-
 </nav>
+
 <div class="message">
     {% include 'flash_messages.html.twig' %}
 </div>

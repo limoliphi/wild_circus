@@ -1,10 +1,31 @@
 $theme-colors: (
         "green": #55B700,
         "blue": #009DDB,
-        "red": #DD1708,
+        "red": #A71C2B,
         "black": #050606,
-        "yellow": #FFC10A,
+        "gold": #FFC10A,
+        "white": #F7FCFC,
+        "light-grey": #e5e5e5,
 );
 
-$primary-color: #009DDB;
+$primary-color: #55B700;
+$secondary-color: #009DDB;
+$third-color: #A71C2B;
+$fourth-color: #050606;
+$fifth-color: #FFC10A;
+$sixth-color: #F7FCFC;
+$seventh-color: #e5e5e5;
 
+
+$font-title: Bangers-Regular;
+$font-paragraph: AmaticSC-Regular;
+
+@font-face {
+  font-family: Bangers-Regular;
+  src: url("fonts/Bangers-Regular.ttf");
+}
+
+@font-face {
+  font-family: AmaticSC-Regular;
+  src: url("fonts/AmaticSC-Regular.ttf");
+}

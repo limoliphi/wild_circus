@@ -4,22 +4,20 @@
 
 {% block body %}
     <div class="photo-joker">
+        <img class="d-block w-100 vh-5" src="{{ asset('build/images/pub.jpg') }}" alt="Photo Joker">
     </div>
 
-    <h1 class="m-5 display-3 title-pub">Les annonces du Joker Circus</h1>
-    <div class="pubs container">
+    <h1 class="title-pub m-5 display-3">Les annonces du Joker Circus</h1>
+    <div class="container">
 
         {% for pub in pubs %}
             <div class="jumbotron">
-                <h2 class="display-4">{{ pub.title }}</h2>
-                <p class="lead">{{ pub.content }}</p>
+                <h2 class="pub-presentation display-4">{{ pub.title }}</h2>
+                <p class="pub-content">{{ pub.content }}</p>
                 <hr class="my-4">
-                <p class="sub-lead">Référence : {{ pub.reference }}</p>
+                <p class="pub-reference">Référence : {{ pub.reference }}</p>
             </div>
         {% endfor %}
     </div>
-    {#    <div class="photo-joker">#}
-    {#        <img src="https://cdn.radiofrance.fr/s3/cruiser-production/2019/11/34c2f58a-5b03-442b-9823-5f73c79d600b/801x410_joker.jpg" style="width: 100%"; height="20%">#}
-    {#    </div>#}
 
 {% endblock %}

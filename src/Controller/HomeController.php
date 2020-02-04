@@ -10,7 +10,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class HomeController extends AbstractController
 {
     /**
-     * @Route("/home", name="home")
+     * @Route("/", name="home")
      * @param int|null $id
      * @param EventRepository $eventRepository
      * @return \Symfony\Component\HttpFoundation\Response
@@ -24,7 +24,6 @@ class HomeController extends AbstractController
         return $this->render('home/index.html.twig', [
             'events' => $events,
             'actors' => $actors
-
         ]);
     }
 }
