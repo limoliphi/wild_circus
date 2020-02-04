@@ -1,27 +1,30 @@
 {% block footer %}
     <footer>
         <div class="cadre-footer container-fluid">
-            <div class="row">
+            <div class="row no-gutters">
                 <div class="d-flex justify-content-around col-lg-4 col-12">
-                    <div class="links1">
-                        <h3 class="mb-5 title_footer">The Joker Circus</h3>
+                    <div class="footer-links">
+                        <h3 class="mb-5 title-footer">The Joker Circus</h3>
                         <div><a href="home" title="Evénements">Les événements</a></div>
                         <div><a href="actor" title="Troupe">La troupe</a></div>
                         <div><a href="pub" title="Contact">Les annonces</a></div>
+                        <div><a href="contact" title="Contact">Contact</a></div>
                     </div>
                 </div>
-                <div class=" d-flex justify-content-around col-lg-4 col-12">
+
+                <div class="container d-flex justify-content-around col-lg-4 col-12">
                     <div class="logo">
-                        <img class="d-block w-100 vh-5" src="{{ asset('build/images/visage.webp') }}" alt="First slide">
+                        <img class="d-block w-100 vh-5" src="{{ asset('build/images/visage.webp') }}"
+                             alt="Logo Joker">
                     </div>
                 </div>
-                <div class="d-flex justify-content-around col-lg-4 col-12">
-                    <div class="infos_footer">
-                        <h3 class="mb-5 title_footer">Ailleurs sur la Toile</h3>
+
+                <div class="container d-flex justify-content-around col-lg-4 col-12">
+                    <div class="network-footer">
+                        <h3 class="mb-5 title-footer">Ailleurs sur la Toile</h3>
 
                         <div><a href="" title="Twitter">Twitter</a></div>
                         <div><a href="" title="Facebook">Facebook</a></div>
-
                     </div>
                 </div>
             </div>

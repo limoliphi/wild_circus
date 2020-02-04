@@ -1,39 +1,38 @@
 {% extends 'layout.html.twig' %}
 
 {% block title %}Joker Circus{% endblock %}
-
 {% block body %}
 
     {% include 'home/carousel.html.twig' %}
 
-    <div class="">
-        <h1 class="m-5 display-2">Welcome to the Joker Circus</h1>
+    <div class="container">
+        <h1 class="first-title m-5 display-2">Welcome to the Joker Circus</h1>
     </div>
-    <div class="text-presentation mt-5 container d-flex justify-content-center">
-        <div class="first-element container">
-        <p>Le Joker, l'ennemi juré de Batman et de Gotham, est le plus grand clown de l'histoire.
-            Mais les années ont passé, de combats en combats, de pièges en pièges, de lois en lois sur la réforme des
-            retraites...
-            voici l'anti-héros rendu à un âge avancé, aspirant à moins d'intrépidité en somme.</p>
+
+    <div class="home-presentation mt-5 container d-flex justify-content-center">
+        <div class="first-element">
+            <p>Le Joker, l'ennemi juré de Batman et de Gotham, est le plus grand clown de l'histoire.
+                Mais les années ont passé, de combats en combats, de pièges en pièges, de lois en lois sur la réforme
+                des
+                retraites...
+                voici l'anti-héros rendu à un âge avancé, aspirant à moins d'intrépidité en somme.</p>
             <hr/>
-        <p>Il a aujourd'hui réalisé son rêve, il est devenu patron de son propre cirque.
-            Il va sûrement s'arrêter près de chez vous.
-            Voici les dates des spectacles. Et découvrez aussi sa troupe, ses annonces, si jamais vous pensiez que le
-            Joker est vraiment rangé des voitures...</p>
+            <p>Il a aujourd'hui réalisé son rêve, il est devenu patron de son propre cirque.
+                Il va sûrement s'arrêter près de chez vous.
+                Voici les dates des spectacles. Et découvrez aussi sa troupe, ses annonces, si jamais vous pensiez que
+                le
+                Joker est vraiment rangé des voitures...</p>
         </div>
-{#        <div class="second-element">#}
-{#            <img class="photo" src="https://miro.medium.com/max/1777/1*UvA_rRD1yGnuOn7WOZpo3w.jpeg">#}
-{#        </div>#}
     </div>
 
-    <div class="mt-5 container">
-        <h2 class="display-3">Les numéros inédits du Joker Circus</h2>
+    <div class="container">
+        <h2 class="second-title mt-5 display-3">Les numéros inédits du Joker Circus</h2>
     </div>
 
-    <div class="mt-5 mb-5 container-fluid">
+    <div class="event mt-5 mb-5 container-fluid">
         <div class="row no-gutters">
             <div class="col-lg-12 col-xs-1">
-                <div class="card-list justify-content-around d-flex flex-wrap">
+                <div class="home-card justify-content-around d-flex flex-wrap">
                     {% for event in events %}
                         <div class="card" style="width: 18rem;">
                             <div class="card-body">
@@ -43,14 +42,9 @@
                                     <img src="{{ vich_uploader_asset(event, 'pictureFile') }}" alt="image event"
                                          class="card-img-top">
                                 {% endif %}
-{#                                <p class="mt-2 card-text">Prochain show le {{ event.date|date('d/m/Y') }}</p>#}
-{#                                <p class="card-text">{{ event.content }}</p>#}
                                 {% for actor in event.actors %}
                                     <p class="card-text">{{ actor.name }}</p>
                                 {% endfor %}
-{#                                <a href="{{ path('actor') }}">#}
-{#                                    <button type="button" class="btn btn-primary">La troupe des acteurs</button>#}
-{#                                </a>#}
                             </div>
                         </div>
                     {% endfor %}

@@ -1,0 +1,26 @@
+.photo-joker {
+  //background-image: url("https://cdn.radiofrance.fr/s3/cruiser-production/2019/11/34c2f58a-5b03-442b-9823-5f73c79d600b/801x410_joker.jpg");
+  height: 60rem;
+  background-size: cover;
+  width: 100%;
+}
+
+.jumbotron {
+  border-left: 5px solid $fifth-color;
+  border-bottom: 5px solid $third-color;
+}
+
+.title-pub {
+  color: $third-color;
+  font-family: $font-title;
+}
+
+.pub-content {
+  font-family: $font-paragraph;
+  font-size: 3em;
+}
+
+.pub-reference {
+  font-size: 2em;
+  font-family: $font-paragraph;
+}
