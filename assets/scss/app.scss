@@ -1,21 +1,18 @@
 @import "~bootstrap/scss/bootstrap";
-
 @import '~@fortawesome/fontawesome-free/scss/fontawesome';
 @import '~@fortawesome/fontawesome-free/scss/regular';
 @import '~@fortawesome/fontawesome-free/scss/solid';
 @import '~@fortawesome/fontawesome-free/scss/brands';
-
 @import "vars";
 @import "navbar_style";
 @import "home";
 @import "footer";
+@import "pages";
 
 body {
-  background-color: #e5e5e5;
+  background-color: $seventh-color;
 }
 
-
-//body {
-//    background-color: white;
-//}
-
+.alert-message {
+  margin-top: 8em;
+}
